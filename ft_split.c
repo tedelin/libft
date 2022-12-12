@@ -6,7 +6,7 @@
 /*   By: tedelin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 17:09:42 by tedelin           #+#    #+#             */
-/*   Updated: 2022/11/18 17:54:12 by tedelin          ###   ########.fr       */
+/*   Updated: 2022/12/12 15:42:50 by tedelin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,19 +54,6 @@ static	char	*ft_wordadd(const char *s, char c)
 	return (word);
 }
 
-static char	**ft_free(char **tab, int j)
-{
-	int	i;
-
-	i = 0;
-	while (i < j)
-	{	
-		free(tab[i]);
-		i++;
-	}
-	return (NULL);
-}
-
 char	**ft_split(char const *s, char c)
 {
 	int			i;
@@ -84,7 +71,7 @@ char	**ft_split(char const *s, char c)
 		{
 			tab[j] = ft_wordadd(&s[i], c);
 			if (!tab[j])
-				return (ft_free(tab, j));
+				return (free(tab), NULL);
 			j++;
 			while (s[i] != c && s[i])
 				i++;
