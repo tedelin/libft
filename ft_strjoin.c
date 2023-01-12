@@ -6,7 +6,7 @@
 /*   By: tedelin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 11:14:19 by tedelin           #+#    #+#             */
-/*   Updated: 2022/11/15 16:28:14 by tedelin          ###   ########.fr       */
+/*   Updated: 2023/01/12 16:41:14 by tedelin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ static size_t	ft_str_len(const char *s)
 		i++;
 	return (i);
 }
+
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*new;
@@ -42,4 +43,4 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		new[j] = '\0';
 	}
 	return (new);
-}	
+}
